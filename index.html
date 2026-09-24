@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>📚 Student Study Planner</h1>
+            <p>Plan your study tasks and achieve your goals</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Add Task Section -->
+        <section class="card">
+            <h2>Add Study Task</h2>
+
+            <form id="taskForm">
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input
+                        type="text"
+                        id="subject"
+                        placeholder="Example: Software Testing"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="task">Task / Topic</label>
+                    <input
+                        type="text"
+                        id="task"
+                        placeholder="Example: Study Unit 1"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="deadline">Deadline</label>
+                    <input type="date" id="deadline" required>
+                </div>
+
+                <button type="submit" class="add-btn">
+                    + Add Task
+                </button>
+
+            </form>
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <span class="stat-icon">📋</span>
+                <h3 id="totalTasks">0</h3>
+                <p>Total Tasks</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">⏳</span>
+                <h3 id="pendingTasks">0</h3>
+                <p>Pending</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">✅</span>
+                <h3 id="completedTasks">0</h3>
+                <p>Completed</p>
+            </div>
+
+        </section>
+
+        <!-- Task List -->
+        <section class="card">
+            <div class="task-header">
+                <h2>My Study Tasks</h2>
+
+                <select id="filterTasks">
+                    <option value="all">All Tasks</option>
+                    <option value="pending">Pending</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+
+            <div id="taskList" class="task-list">
+                <!-- Tasks will appear here -->
+            </div>
+
+            <div id="emptyMessage" class="empty-message">
+                <div>📖</div>
+                <p>No study tasks yet.</p>
+                <small>Add your first task above!</small>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Student Study Planner | CPD Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
